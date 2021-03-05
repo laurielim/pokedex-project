@@ -12,7 +12,22 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1200;
+  max-width: 1200px;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem;
+}
+
+p {
+  padding: 10px 0;
+}
+section {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #eee;
 }
 
 #pokedex {
@@ -20,21 +35,94 @@ body {
   width: 100%;
   justify-content: center;
 }
-
-section {
-  padding: 20px;
-  width: 300px;
+.panel {
+  height: 500px;
+  width: 350px;
+  background-color: #ff0000;
   border: 1px solid black;
-  height: 250px;
+}
+.middle {
+  width: 50px;
+  background-color: #ff0000;
+  border: 1px solid black;
+}
+/************ Left Screen **************/
+
+#left-panel {
+  display: grid;
+  background-color: hotpink;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  grid-gap: 0.5rem;
 }
 
+/* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+.camera {
+  grid-area: 2 / 2 / 4 / 4;
+  background-color: blue;
+}
+
+.signal-lights {
+  grid-area: 2 / 5 / span 1 / span 3;
+  background-color: yellow;
+  display: flex;
+}
+
+.red-btn {
+  grid-area: 12 / 3 / 14 / span 1;
+  background-color: red;
+  z-index: 1000;
+}
+
+.speaker {
+  grid-area: 12 / 10 / 14 / 12;
+  background-color: grey;
+  z-index: 1000;
+}
+
+.frame {
+  transform: scaleX(1.1);
+  grid-area: 4 / 2 / span 10 / span 10;
+  background-color: indigo;
+  border: 0 solid green;
+  border-radius: 5px 5px 5px 10%;
+}
+
+#poke-info {
+  grid-area: 5 / 2 / span 7 / span 10;
+  display: flex;
+  z-index: 1000;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+.right-col {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  justify-content: space-around;
+  background-color: blue;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.left-col {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  justify-content: space-around;
+}
+
+/************ Right Screen **************/
 a {
   padding-left: 50px;
   text-transform: uppercase;
-}
-
-p {
-  padding: 10px 0;
 }
 
 #poke-list {
