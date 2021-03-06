@@ -41,7 +41,7 @@
       // Add an anchor tag inside div with pokemon name
       pokemon.innerHTML = `
       <p>${index.toString().padStart(3, "0")} </p>
-      <a href = "#${name}">${name}</a>`;
+      <div  class="selected"><a href = "#${name}">${name}</a></div>`;
       // Append anchor to poke-list section
       document.getElementById("poke-list").appendChild(pokemon);
     };

@@ -18,15 +18,17 @@
       <h1>Kanto Pokedex</h1>
       <div id="pokedex">
         <div class="panel" id="left-panel">
-          <div class="camera">1</div>
-          <div class="signal-lights">
-            <div class="signal-light red-light">2a</div>
-            <div class="signal-light yellow-light">2b</div>
-            <div class="signal-light green-light">2c</div>
+          <div class="circle camera">
+            <div class="circle camera-lense"></div>
           </div>
-          <div class="frame">3</div>
+          <div class="signal-lights">
+            <div class="circle signal-light red-light"></div>
+            <div class="circle signal-light yellow-light"></div>
+            <div class="circle signal-light green-light"></div>
+          </div>
+          <div class="frame"></div>
           <section id="poke-info">
-            <div class="left-col poke-img">
+            <div class="screen-col poke-img">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
                 alt="bulbasaur"
@@ -34,31 +36,38 @@
               />
               <h4 id="poke-index">No001</h4>
             </div>
-            <div class="right-col poke-data">
+            <div class="screen-col poke-data">
               <h4 id="poke-name">BULBASAUR</h4>
               <h4 id="poke-type">Grass, Poison</h4>
               <h4 id="poke-height">HT 6'07"</h4>
               <h4 id="poke-weight">WT 10 Kg</h4>
             </div>
+            <div class="poke-fact"></div>
           </section>
-          <div class="btn red-btn">4</div>
-          <div class="speaker">5</div>
+          <div class="screen-overlay"></div>
+          <div class="circle btn red-btn"></div>
+          <div class="speaker">
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+          </div>
         </div>
         <div class="middle"></div>
-        <div class="right panel">
+        <div class="panel" id="right-panel">
           <div class="green-display"></div>
           <section id="poke-list">
             <h2>Content</h2>
           </section>
           <div class="white-buttons">
-            <div class="btn white-btn"></div>
-            <div class="btn white-btn"></div>
+            <div class="white-btn"></div>
+            <div class="white-btn"></div>
           </div>
           <div class="black-buttons">
-            <div class="btn black-btn"></div>
-            <div class="btn black-btn"></div>
+            <div class="black-btn"></div>
+            <div class="black-btn"></div>
           </div>
-          <div class="btn yellow-btn"></div>
+          <div class="circle yellow-btn"></div>
         </div>
       </div>
     </div>
