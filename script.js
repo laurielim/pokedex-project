@@ -3,6 +3,7 @@
 
 	// Global variable
 	let firstSearch = true;
+	let selectedPokemon = "";
 
 	function executeScript() {
 		// Make API call
@@ -21,7 +22,17 @@
 				// Add event listener to each pokemon
 				document.querySelectorAll("a").forEach((anchor) => {
 					anchor.addEventListener("click", function () {
-						// When user clicks on pokemon name, make another API call to retrieve that pokemon information
+						// When user clicks on pokemon name
+						if (selectedPokemon) {
+							document
+								.getElementById(selectedPokemon)
+								.classList.remove("selected");
+						}
+						selectedPokemon = `${this.innerHTML}`;
+
+						document.getElementById(selectedPokemon).classList.add("selected");
+
+						// Make another API call to retrieve that pokemon information
 						fetch(`https://pokeapi.co/api/v2/pokemon/${this.innerHTML}`)
 							// Parse JSON
 							.then((response) => response.json())
@@ -44,7 +55,7 @@
 			// Add an anchor tag inside div with pokemon name
 			pokemon.innerHTML = `
       <p>${index.toString().padStart(3, "0")} </p>
-      <div  class="selected"><a href = "#${name}">${name}</a></div>`;
+      <div  id="${name}"><a href = "#${name}" >${name}</a></div>`;
 			// Append anchor to poke-list section
 			document.getElementById("poke-list").appendChild(pokemon);
 		};
@@ -68,7 +79,7 @@
 				document.getElementById("poke-info").innerHTML = "";
 			}
 			let sprite = data.sprites.front_default;
-			let types = data.types.map((type) => type.type.name);
+			let types = data.types.map((type) => type.type.name.toUpperCase());
 			let height = data.height;
 			let weight = data.weight;
 			// Create a new "div" element
@@ -86,7 +97,7 @@
       <div class="screen-col poke-data">
         <h4 id="poke-name">${name.toUpperCase()}</h4>
         <h4 id="poke-type">${types.join(", ")}</h4>
-        <h4 id="poke-height">HT ${height} cm</h4>
+        <h4 id="poke-height">HT ${height}0 cm</h4>
         <h4 id="poke-weight">WT ${weight} kg</h4>
       </div>
       <div class="poke-fact">You gotta Splash if you want to evolve.</div>
