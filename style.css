@@ -1,261 +1,300 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 12px;
+	font-size: 12px;
 }
 
 body {
-  font-family: "Press Start 2P", "Courier New", Courier, monospace;
-  background-color: #f8ee5f;
+	font-family: "Press Start 2P", "Courier New", Courier, monospace;
+	background-color: #f8ee5f;
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1200px;
 }
 
 h1 {
-  text-align: center;
-  margin: 2rem;
+	text-align: center;
+	margin: 2rem;
 }
 
 #pokedex {
-  display: flex;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 750px;
-  justify-content: center;
-  height: 500px;
+	display: flex;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 750px;
+	justify-content: center;
+	height: 500px;
 }
 
 .middle {
-  width: 5%;
-  background-color: #ff0000;
-  border: 1px solid black;
-  border-radius: 5px;
+	width: 5%;
+	background-color: #ff0000;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 2px 17px 4px 0 rgba(0, 0, 0, 0.3), 10px 0 4px 0 rgba(0, 0, 0, 0.3),
+		inset 8px 3px 4px 0 rgba(255, 255, 255, 0.4);
+	z-index: 2;
 }
 .panel {
-  width: 47.5%;
-  background-color: #ff0000;
-  border: 1px solid black;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(14, 1fr);
-  grid-gap: 0.5rem;
+	width: 47.5%;
+	background-color: #ff0000;
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(14, 1fr);
+	grid-gap: 0.5rem;
 }
 
 #right-panel {
-  border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	box-shadow: 6px 11px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 #left-panel {
-  border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+	box-shadow: 1px 14px 4px 2px rgba(0, 0, 0, 0.3),
+		inset 5px 5px 4px 5px rgba(0, 0, 0, 0.3),
+		inset 5px -20px 4px -10px rgba(255, 255, 255, 0.4);
 }
 
 section {
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-  background-color: #eee;
-  grid-area: 5 / 2 / span 7 / span 10;
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	background-color: #eee;
+	grid-area: 5 / 2 / span 7 / span 10;
 }
 
 .circle {
-  border-radius: 50%;
+	border-radius: 50%;
 }
 
 /************ Left Screen **************/
 
 .camera {
-  grid-area: 2 / 2 / 4 / 5;
-  background-color: blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 65px;
-  width: 65px;
+	grid-area: 2 / 2 / 4 / 5;
+	background-color: silver;
+	background-image: linear-gradient(to bottom, white 0%, black 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 65px;
+	width: 65px;
 }
 
 .camera-lense {
-  background-color: cornflowerblue;
-  width: 75%;
-  height: 75%;
+	background-color: #84ecf0;
+	background-image: linear-gradient(
+		45deg,
+		#84ecf0 30%,
+		rgba(255, 255, 255, 0.8) 100%
+	);
+	width: 75%;
+	height: 75%;
 }
 
 .signal-lights {
-  grid-area: 2 / 5 / span 1 / span 3;
-  display: flex;
-  justify-content: space-between;
+	grid-area: 2 / 5 / span 1 / span 3;
+	display: flex;
+	justify-content: space-between;
 }
 
 .signal-light {
-  height: 20px;
-  width: 20px;
-  border: 3px solid black;
+	height: 20px;
+	width: 20px;
+	border: 3px solid black;
 }
 
 .red-light {
-  background-color: red;
+	background-color: red;
+	background-image: linear-gradient(to bottom, #ffb800 0%, red 100%);
 }
 .yellow-light {
-  background-color: yellow;
+	background-color: yellow;
+	background-image: linear-gradient(to bottom, white 0%, yellow 100%);
 }
 .green-light {
-  background-color: green;
+	background-color: green;
+	background-image: linear-gradient(to bottom, white 0%, green 100%);
+}
+
+.frame-lights {
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	top: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+.frame-light {
+	height: 10px;
+	width: 10px;
+	background-color: red;
+	border: 2px solid black;
+	margin: 0 5px;
 }
 
 .red-btn {
-  grid-area: 12 / 3 / 14 / span 1;
-  background-color: red;
-  height: 35px;
-  width: 35px;
-  z-index: 1000;
-  align-self: center;
-  justify-self: end;
-  border: 3px solid black;
+	grid-area: 12 / 3 / 14 / span 1;
+	background-color: red;
+	height: 35px;
+	width: 35px;
+	z-index: 1000;
+	align-self: center;
+	justify-self: end;
+	border: 3px solid black;
 }
 
 .speaker {
-  grid-area: 12 / 9 / 14 / 12;
-  z-index: 1000;
-  align-self: center;
-  justify-self: center;
-  width: 65%;
+	grid-area: 12 / 9 / 14 / 12;
+	z-index: 1000;
+	align-self: center;
+	justify-self: center;
+	width: 65%;
 }
 
 .speaker hr {
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 3px 0;
+	border: 3px solid black;
+	border-radius: 10px;
+	margin: 3px 0;
 }
 
 .frame {
-  transform: scaleX(1.1);
-  grid-area: 4 / 2 / span 10 / span 10;
-  background-color: #f3f4e8;
-  border: 0 solid green;
-  border-radius: 5px 5px 5px 50px;
+	transform: scaleX(1.1);
+	grid-area: 4 / 2 / span 10 / span 10;
+	background-color: #f3f4e8;
+	border: 0 solid green;
+	border-radius: 5px 5px 5px 50px;
+	box-shadow: 5px 5px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 #poke-info {
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 1000;
-  padding: 5% 0;
+	display: flex;
+	flex-wrap: wrap;
+	z-index: 1000;
+	padding: 5% 0;
 }
 
 .screen-overlay {
-  background-color: #333;
-  grid-area: 5 / 2 / span 7 / span 10;
-  z-index: 2000;
+	background-color: #333;
+	grid-area: 5 / 2 / span 7 / span 10;
+	z-index: 2000;
 }
 
 .screen-col {
-  display: flex;
-  flex-flow: column wrap;
-  height: 60%;
+	display: flex;
+	flex-flow: column wrap;
+	height: 60%;
 }
 
 .poke-img {
-  width: 40%;
-  align-items: center;
+	width: 40%;
+	align-items: center;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+	width: 100px;
+	height: 100px;
 }
 
 .poke-data {
-  width: 60%;
-  justify-content: space-around;
+	width: 60%;
+	justify-content: space-around;
 }
 
 .poke-fact {
-  width: 100%;
-  height: 40%;
-  border-top: 2px solid black;
+	width: 100%;
+	height: 40%;
+	border-top: 2px solid black;
 }
 
 /************ Right Screen **************/
 .green-display {
-  grid-area: 2 / 3 / 5 / span 8;
-  background-color: green;
-  height: 50%;
-  align-self: center;
-  border-radius: 5px;
+	grid-area: 2 / 3 / 5 / span 8;
+	background-color: #52ae5f;
+	height: 50%;
+	align-self: center;
+	border-radius: 5px;
+	box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .white-buttons {
-  grid-area: 13 / 2 / 14 / 6;
+	grid-area: 13 / 2 / 14 / 6;
 
-  display: flex;
+	display: flex;
 }
 
 .white-btn {
-  background-color: white;
-  width: 50%;
-  border: 1px solid black;
-  border-radius: 5px;
+	background-color: white;
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
 .black-buttons {
-  grid-area: 12/ 9 / 13 / 12;
-
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
+	grid-area: 12/ 9 / 13 / 12;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
 }
 
 .black-btn {
-  background-color: black;
-  height: 8px;
-  width: 45%;
-  border-radius: 10px;
-  display: flex;
+	background-color: black;
+	height: 8px;
+	width: 45%;
+	border-radius: 10px;
+	display: flex;
+	box-shadow: 2px 1px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 .yellow-btn {
-  grid-area: 13/ 11 / 14 / 12;
-  background-color: yellow;
-  height: 30px;
-  width: 30px;
+	grid-area: 13/ 11 / 14 / 12;
+	background-color: yellow;
+	background-image: radial-gradient(circle at 25%, #faff00 0%, #7e8119 100%);
+	height: 30px;
+	width: 30px;
 }
 
 #poke-list {
-  overflow-y: scroll;
-  padding: 5% 10%;
+	overflow-y: scroll;
+	padding: 5% 10%;
+	box-shadow: 5px 5px 4px 3px rgba(0, 0, 0, 0.3),
+		0 -6px 4px 1px rgba(255, 255, 255, 0.4);
 }
 
 #poke-list h2 {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 a {
-  padding: 0.3rem 38px;
-  display: block;
-  text-transform: uppercase;
+	padding: 0.3rem 38px;
+	display: block;
+	text-transform: uppercase;
 }
 
 .selected {
-  position: relative;
+	position: relative;
 }
 
 .selected::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 20%;
-  transform: translateY(-50%);
-  left: 0;
-  transform: translateX(-100%);
-  border-left: 1rem solid black;
-  border-top: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid transparent;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 20%;
+	transform: translateY(-50%);
+	left: 0;
+	transform: translateX(-100%);
+	border-left: 1rem solid black;
+	border-top: 0.5rem solid transparent;
+	border-bottom: 0.5rem solid transparent;
 }

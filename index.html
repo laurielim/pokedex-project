@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Kanto Pokedex</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Kanto Pokedex</h1>
-      <div id="pokedex">
-        <div class="panel" id="left-panel">
-          <div class="circle camera">
-            <div class="circle camera-lense"></div>
-          </div>
-          <div class="signal-lights">
-            <div class="circle signal-light red-light"></div>
-            <div class="circle signal-light yellow-light"></div>
-            <div class="circle signal-light green-light"></div>
-          </div>
-          <div class="frame"></div>
-          <section id="poke-info">
-            <div class="screen-col poke-img">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-                alt="bulbasaur"
-                class="poke-sprite"
-              />
-              <h4 id="poke-index">No001</h4>
-            </div>
-            <div class="screen-col poke-data">
-              <h4 id="poke-name">BULBASAUR</h4>
-              <h4 id="poke-type">Grass, Poison</h4>
-              <h4 id="poke-height">HT 6'07"</h4>
-              <h4 id="poke-weight">WT 10 Kg</h4>
-            </div>
-            <div class="poke-fact"></div>
-          </section>
-          <div class="screen-overlay"></div>
-          <div class="circle btn red-btn"></div>
-          <div class="speaker">
-            <hr />
-            <hr />
-            <hr />
-            <hr />
-          </div>
-        </div>
-        <div class="middle"></div>
-        <div class="panel" id="right-panel">
-          <div class="green-display"></div>
-          <section id="poke-list">
-            <h2>Content</h2>
-          </section>
-          <div class="white-buttons">
-            <div class="white-btn"></div>
-            <div class="white-btn"></div>
-          </div>
-          <div class="black-buttons">
-            <div class="black-btn"></div>
-            <div class="black-btn"></div>
-          </div>
-          <div class="circle yellow-btn"></div>
-        </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<title>Kanto Pokedex</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Kanto Pokedex</h1>
+			<div id="pokedex">
+				<div class="panel" id="left-panel">
+					<div class="circle camera">
+						<div class="circle camera-lense"></div>
+					</div>
+					<div class="signal-lights">
+						<div class="circle signal-light red-light"></div>
+						<div class="circle signal-light yellow-light"></div>
+						<div class="circle signal-light green-light"></div>
+					</div>
+					<div class="frame">
+						<div class="frame-lights">
+							<div class="circle frame-light"></div>
+							<div class="circle frame-light"></div>
+						</div>
+					</div>
+					<section id="poke-info">
+						<div class="screen-col poke-img">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+								alt="bulbasaur"
+								class="poke-sprite"
+							/>
+							<h4 id="poke-index">No001</h4>
+						</div>
+						<div class="screen-col poke-data">
+							<h4 id="poke-name">BULBASAUR</h4>
+							<h4 id="poke-type">Grass, Poison</h4>
+							<h4 id="poke-height">HT 6'07"</h4>
+							<h4 id="poke-weight">WT 10 Kg</h4>
+						</div>
+						<div class="poke-fact"></div>
+					</section>
+					<div class="screen-overlay"></div>
+					<div class="circle btn red-btn"></div>
+					<div class="speaker">
+						<hr />
+						<hr />
+						<hr />
+						<hr />
+					</div>
+				</div>
+				<div class="middle"></div>
+				<div class="panel" id="right-panel">
+					<div class="green-display"></div>
+					<section id="poke-list">
+						<h2>Content</h2>
+					</section>
+					<div class="white-buttons">
+						<div class="white-btn"></div>
+						<div class="white-btn"></div>
+					</div>
+					<div class="black-buttons">
+						<div class="black-btn"></div>
+						<div class="black-btn"></div>
+					</div>
+					<div class="circle yellow-btn"></div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
