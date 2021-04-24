@@ -316,6 +316,7 @@ a {
 
 .selected {
 	position: relative;
+	scroll-margin-top: 2.2rem;
 }
 
 .selected::before {
